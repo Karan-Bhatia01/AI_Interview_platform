@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Setup - AceNext</title>
+    <link rel="stylesheet" href="practice.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">AceNext</span>
+                <div class="logo-accent"></div>
+            </div>
+            <div class="nav-actions">
+                <a href="index.html" class="btn-secondary">← Back to Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="practice-container">
+        <div class="practice-card">
+            <div class="card-header">
+                <div class="header-icon">🚀</div>
+                <h1 class="card-title">Set Up Your AI Interview</h1>
+                <p class="card-subtitle">Customize your practice session for maximum impact and personalized AI feedback</p>
+            </div>
+
+            <form id="practiceForm" class="practice-form">
+                <div class="form-group">
+                    <label for="name" class="form-label">
+                        <span class="label-text">Your Name</span>
+                        <span class="label-optional">(Optional)</span>
+                    </label>
+                    <input type="text" id="name" class="form-input" placeholder="Enter your full name">
+                    <div class="input-glow"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="role" class="form-label">
+                        <span class="label-text">Target Role</span>
+                        <span class="label-required">*</span>
+                    </label>
+                    <input type="text" id="role" class="form-input" placeholder="e.g., Software Engineer, Data Scientist" required>
+                    <div class="input-glow"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="company" class="form-label">
+                        <span class="label-text">Company Name</span>
+                        <span class="label-optional">(Optional)</span>
+                    </label>
+                    <input type="text" id="company" class="form-input" placeholder="e.g., Google, Microsoft, Startup">
+                    <div class="input-glow"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="jobDescription" class="form-label">
+                        <span class="label-text">Job Description</span>
+                        <span class="label-optional">(Optional)</span>
+                    </label>
+                    <textarea id="jobDescription" class="form-textarea" placeholder="Paste the job description here to get more targeted questions..." rows="4"></textarea>
+                    <div class="input-glow"></div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="experienceLevel" class="form-label">
+                            <span class="label-text">Experience Level</span>
+                        </label>
+                        <select id="experienceLevel" class="form-select">
+                            <option value="">Select level</option>
+                            <option value="Fresher">Fresher (0-1 years)</option>
+                            <option value="1-3 years">Junior (1-3 years)</option>
+                            <option value="3-5 years">Mid-level (3-5 years)</option>
+                            <option value="5+ years">Senior (5+ years)</option>
+                        </select>
+                        <div class="input-glow"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="interviewType" class="form-label">
+                            <span class="label-text">Interview Type</span>
+                        </label>
+                        <select id="interviewType" class="form-select">
+                            <option value="">Select type</option>
+                            <option value="Technical">Technical Round</option>
+                            <option value="Coding">Coding Round</option>
+                            <option value="Behavioral">Behavioral</option>
+                            <option value="System Design">System Design</option>
+                            <option value="Mixed">Mixed Interview</option>
+                        </select>
+                        <div class="input-glow"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="skills" class="form-label">
+                        <span class="label-text">Key Skills & Technologies</span>
+                        <span class="label-optional">(Optional)</span>
+                    </label>
+                    <input type="text" id="skills" class="form-input" placeholder="e.g., React, Python, Machine Learning, AWS">
+                    <div class="form-hint">Separate multiple skills with commas</div>
+                    <div class="input-glow"></div>
+                </div>
+
+                <div class="ai-preview-section">
+                    <div class="ai-preview-header">
+                        <div class="ai-icon">🤖</div>
+                        <h3>AI Interview Preview</h3>
+                    </div>
+                    <div class="ai-preview-content">
+                        <div class="preview-item">
+                            <div class="preview-icon">💡</div>
+                            <span>Personalized questions based on your role</span>
+                        </div>
+                        <div class="preview-item">
+                            <div class="preview-icon">📊</div>
+                            <span>Real-time performance analysis</span>
+                        </div>
+                        <div class="preview-item">
+                            <div class="preview-icon">🎯</div>
+                            <span>Instant feedback and improvement tips</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <div class="btn-content">
+                        <span class="btn-text">Start AI Interview Practice</span>
+                        <div class="btn-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="btn-shimmer"></div>
+                </button>
+            </form>
+        </div>
+
+        <div class="features-preview">
+            <div class="feature-card">
+                <div class="feature-icon">🤖</div>
+                <h3>AI-Powered Questions</h3>
+                <p>Get personalized questions based on your role and experience level</p>
+                <div class="feature-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 90%;"></div>
+                    </div>
+                    <span class="progress-text">90% Accuracy</span>
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Real-time Feedback</h3>
+                <p>Receive instant analysis of your answers and communication skills</p>
+                <div class="feature-metrics">
+                    <div class="metric-item">
+                        <span class="metric-value">4.8</span>
+                        <span class="metric-label">Rating</span>
+                    </div>
+                    <div class="rating-stars">
+                        <div class="star active"></div>
+                        <div class="star active"></div>
+                        <div class="star active"></div>
+                        <div class="star active"></div>
+                        <div class="star active"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>Performance Tracking</h3>
+                <p>Monitor your progress and identify areas for improvement</p>
+                <div class="performance-chart">
+                    <div class="chart-bar" style="height: 60%;"></div>
+                    <div class="chart-bar" style="height: 80%;"></div>
+                    <div class="chart-bar" style="height: 95%;"></div>
+                    <div class="chart-bar" style="height: 75%;"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="practice.js"></script>
+</body>
+</html>

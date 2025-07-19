@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Practice Session</title>
+    <link rel="stylesheet" href="start.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-accent"></div>
+                <span class="logo-text">InterviewAI</span>
+            </div>
+            <h1 class="main-title">Practice Interview Session</h1>
+            <button id="endInterviewBtn" class="end-interview-btn" disabled>
+                <span class="end-icon">🏁</span>
+                <span>End Interview</span>
+            </button>
+        </div>
+        <div class="user-info" id="userInfo">
+            Ready to begin your interview session
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Questions Section -->
+        <div class="questions-section">
+            <div class="section-header">
+                <h2 class="section-title">📝 Interview Questions</h2>
+                <div class="controls-row">
+                    <select id="questionCategory" class="category-select">
+                        <option value="mixed">Mixed Questions</option>
+                        <option value="technical">Technical</option>
+                        <option value="behavioral">Behavioral</option>
+                    </select>
+                    <button id="generateBtn" class="generate-btn" onclick="generateQuestions()">
+                        <div class="btn-shimmer"></div>
+                        <div class="btn-content">
+                            <span class="btn-icon">🎯</span>
+                            <span class="btn-text">Generate Questions</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div id="questionsList" class="questions-grid">
+                <div class="questions-placeholder">
+                    <p>Click "Generate Questions" to start practicing</p>
+                </div>
+            </div>
+            
+            <!-- Selected Question Display -->
+            <div id="selectedQuestionArea" class="selected-question" style="display: none;">
+                <h3>Selected Question:</h3>
+                <p id="selectedQuestionText"></p>
+            </div>
+        </div>
+
+        <!-- Video Section -->
+        <div class="video-section">
+            <div class="section-header">
+                <h2 class="section-title">📹 Live Session</h2>
+                <div class="session-info">
+                    <div class="timer" id="sessionTimer">00:00</div>
+                    <div class="session-status">
+                        <div class="status-indicator" id="sessionIndicator"></div>
+                        <span>Session Active</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-container">
+                <video id="liveVideo" autoplay muted></video>
+                <div class="video-overlay">
+                    <div class="emotion-display" id="emotionResult">😊 Ready to start</div>
+                </div>
+            </div>
+
+            <div class="video-controls">
+                <button id="toggleMicButton" class="mic-button">
+                    <span class="mic-icon">🎙️</span>
+                    <span class="mic-text">Start Recording</span>
+                </button>
+                <div class="recording-indicator" id="recordingIndicator"></div>
+            </div>
+
+            <!-- Processing Status -->
+            <div class="processing-status">
+                <div class="status-item">
+                    <span class="status-label">Audio Processing:</span>
+                    <span id="audioStatus" class="status-value">⏳ Waiting</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">Video Processing:</span>
+                    <span id="videoStatus" class="status-value">⏳ Waiting</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End Interview Modal -->
+    <div id="endInterviewModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="modal-icon">🏁</span>
+                <h3 class="modal-title">End Interview Session</h3>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to end this interview session?</p>
+                <p class="modal-subtitle">Your responses will be analyzed and a report will be generated.</p>
+            </div>
+            <div class="modal-actions">
+                <button id="cancelEndBtn" class="modal-btn cancel-btn">Cancel</button>
+                <button id="confirmEndBtn" class="modal-btn confirm-btn">End & Generate Report</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="start.js"></script>
+</body>
+</html>

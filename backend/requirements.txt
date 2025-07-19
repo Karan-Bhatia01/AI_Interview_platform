@@ -1,0 +1,44 @@
+fastapi
+uvicorn
+requests
+python-dotenv
+pydantic
+assemblyai
+google-generativeai
+google-api-python-client
+google-auth
+google-auth-httplib2
+proto-plus
+protobuf
+grpcio
+tqdm
+httpx
+python-multipart
+tensorflow 
+opencv-python 
+numpy
+ddgs
+
+# LangChain Core
+langchain
+langchain-core
+# Groq
+langchain-groq
+# LangChain Text Splitters and Document Loaders
+langchain-text-splitters
+
+# Vector Store Integrations
+langchain-chroma  # For Chroma vector store
+
+# Tool and Agent Utilities
+langchainhub  # For accessing pre-built LangChain tools and prompts
+
+# File Handling for Document Loaders
+PyPDF2  # For PDF document loading
+pypdf
+docx2txt  # For Word document loading
+
+langchain_community
+langchain-experimental
+
+psycopg2-binary
